@@ -1,7 +1,7 @@
 <ivy-module version="2.0">
     <info organisation="prom" module="ProcessComparisonPetriNetDecomposition" revision="latest">
     	<description>
-    		Version 6.14.1
+    		Version 6.14.2
     	</description>
     </info>
     <configurations>
@@ -16,7 +16,16 @@
     	<!-- ProM packages. -->
     	<dependency org="prom" name="BasicUtils" rev="latest" changing="true" transitive="true" />
     	<dependency org="prom" name="Widgets" rev="latest" changing="true" transitive="true" />
+    	<dependency org="prom" name="AcceptingPetriNet" rev="latest" changing="true" transitive="true"/>
+    	<dependency org="prom" name="AcceptingPetriNetDecomposer" rev="latest" changing="true" transitive="true"/>
+    	<dependency org="prom" name="PNetReplayer" rev="latest" changing="true" transitive="true"/>
+		<dependency org="prom" name="PNetAlignmentAnalysis" rev="latest" changing="true" transitive="true"/>
+    	<dependency org="prom" name="GraphViz" rev="latest" changing="true" transitive="true"/>
     	<!-- Third party libraries. These may span multiple lines. -->
+		<dependency org="com.philippe-fournier-viger" name="spmf" rev="2.18"/>
+		<!-- In the normal ProM context, we get these automatically -->
+        <dependency org="javax.xml.bind" name="jaxb-api" rev="2.4.0-b180830.0359"/> <!-- for import XES with "ProM log files (Naive)" -->
+    	<dependency org="jfree" name="jfreechart" rev="1.0.13"/>
     	<!-- Please uncomment the second line in the resolve target in your build.xml file
     	     if you have any third party libraries. -->
  		<!-- Third party library downloaded from maven repository. -->
