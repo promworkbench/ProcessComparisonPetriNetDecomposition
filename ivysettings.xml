@@ -15,11 +15,13 @@
             <artifact pattern="https://github.com/promworkbench/Releases/raw/main/Libraries/[module]/[revision]/[artifact]_[revision].[ext]" />
         </url>
         <ibiblio name="maven2" m2compatible="true" root="https://repo1.maven.org/maven2/"/>
+		<ibiblio name="aksw" m2compatible="true" root="https://maven.aksw.org/repository/internal/"/>
         <chain name="default" returnFirst="true">  
             <resolver ref="prom" />  
             <resolver ref="prom-svn" />  
             <resolver ref="prom-libs" />  
             <resolver ref="maven2" />  
+            <resolver ref="aksw" />  
         </chain>  
     </resolvers>
 </ivysettings>
